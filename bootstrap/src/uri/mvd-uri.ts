@@ -108,9 +108,9 @@ export class MvdUri implements ZLUX.UriBroker {
     }
     const protocol = window.location.protocol;
     const wsProtocol = (protocol === 'https:') ? 'wss:' : 'ws:';
-		const uri = `${wsProtocol}//${window.location.host}${this.pluginRootUri(plugin)}`
-			+ `services/${serviceName}/${version}/${relativePath}`;
-		return proxy_mode ? uri.replace('ui', 'ws') : uri;
+    const uri = `${wsProtocol}//${window.location.host}${this.pluginRootUri(plugin)}`
+      + `services/${serviceName}/${version}/${relativePath}`;
+    return proxy_mode ? uri.replace('ui', 'ws') : uri;
   }
 
   /**
